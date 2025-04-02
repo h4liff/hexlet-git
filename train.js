@@ -34,3 +34,45 @@
 // const result = makeCensored(sentence, ['die', 'play']);
 // console.log(result)
 
+
+// const flatten = (coll) => {
+//     const result = [];
+//     for (const item of coll) {
+//         if (Array.isArray(item) === true) {
+//             for (const element of item) {
+//                 result.push(element);
+//             }
+//         } else {
+//             result.push(item)
+//         }
+//     }
+//     return result
+// }
+
+// const things = ['one', ['one', 'three', 'four'], 'three'];
+// const flattened = flatten(things);
+
+// console.log(flattened);
+
+// const duplicate = (item) => [item, item]; 
+// const things = ['one', ['one', 'three', 'four'], 'three'];
+// const newThings = things.map(duplicate);
+// console.log(newThings);
+import _ from 'lodash';
+
+const getSameCount = (coll1, coll2) => {
+    let result = [];
+    for (const item of coll1) {
+        for (const item2 of coll2) {
+            if (item === item2) {
+                result.push(item)
+            }
+        }
+    }
+    result = uniq(result);
+    return result.length;
+}
+
+const result = getSameCount([1, 3, 2, 2], [3, 1, 1, 2, 5]);
+
+console.log(result);
