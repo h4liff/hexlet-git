@@ -58,21 +58,81 @@
 // const things = ['one', ['one', 'three', 'four'], 'three'];
 // const newThings = things.map(duplicate);
 // console.log(newThings);
-import _ from 'lodash';
+// import _ from 'lodash';
 
-const getSameCount = (coll1, coll2) => {
-    let result = [];
-    for (const item of coll1) {
-        for (const item2 of coll2) {
-            if (item === item2) {
-                result.push(item)
-            }
-        }
-    }
-    result = uniq(result);
-    return result.length;
-}
+// const getSameCount = (coll1, coll2) => {
+//     let result = [];
+//     for (const item of coll1) {
+//         for (const item2 of coll2) {
+//             if (item === item2) {
+//                 result.push(item)
+//             }
+//         }
+//     }
+//     result = uniq(result);
+//     return result.length;
+// }
 
-const result = getSameCount([1, 3, 2, 2], [3, 1, 1, 2, 5]);
+// const result = getSameCount([1, 3, 2, 2], [3, 1, 1, 2, 5]);
 
-console.log(result);
+// console.log(result);
+
+
+// const isBracketStructureBalanced = (string) => {
+
+//     const open = '([{<';
+//     const close = ')]}>';  
+//     const stack = [];
+
+
+//     for (const symbol of string) {
+//         const openIndex = open.indexOf(symbol);
+//         if (openIndex !== -1) {
+//             stack.push(openIndex);
+//         } else {
+//             const closeIndex = close.indexOf(symbol);
+//             if (closeIndex !== -1) {
+//                 if (stack.length === 0 || stack.pop() !== closeIndex) {
+//                     return false;
+//                 }
+//             }
+//         }
+//     }
+//     return stack.length === 0;
+// }
+
+// console.log(isBracketStructureBalanced('(>'));  // false
+// console.log(isBracketStructureBalanced('()'));  // true
+// console.log(isBracketStructureBalanced('[()]'));  // true
+// console.log(isBracketStructureBalanced('({}[])'));  // true
+// console.log(isBracketStructureBalanced('{<>}}')); // false
+// console.log(isBracketStructureBalanced('([)]')); // false
+
+
+// const flatten = (array) => {
+//     if (array.length === 0) return [];
+//     let result = [];
+//     for (const element of array) {
+//       if (Array.isArray(element)) {
+//         let spreaded = [...element];
+//         for (const element2 of spreaded) {
+//             result.push(element2);
+//         }
+//       } else {
+//         result.push(element);
+//       }
+//     }
+//     return result;
+//   }
+  
+//   export {flatten};
+
+// const a = flatten([]); // []
+// const b = flatten([1, [3, 2], 9]); // [1, 3, 2, 9]
+// const c = flatten([1, [[2], [3]], [9]]); // [1, [2], [3], 9]
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+
+
